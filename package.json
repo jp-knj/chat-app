@@ -9,6 +9,11 @@
     "lint": "yarn lint:format && yarn lint:fix",
     "type-check": "tsc"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint"
+    }
+  },
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
