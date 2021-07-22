@@ -16,14 +16,12 @@ export const Home: React.FC = () => {
       <Styled.Right as="main">
         <Styled.Content>
           <strong className="mobile">Q&A部屋へようこそ</strong>
-
+          <Styled.Separator>部屋を作りたい方へ</Styled.Separator>
           <Button btnType="fill">
             <img src={IconGoogle} alt="Googleアイコン" />
             ログインする
           </Button>
-
           <Styled.Separator>部屋に入りたい方へ</Styled.Separator>
-
           <form>
             <Input type="text" placeholder="コードを入力してください" />
             <Button btnType="fill" type="submit">
