@@ -1,7 +1,8 @@
 import React from 'react';
 import * as Styled from './styles';
-
 import { Link } from 'react-router-dom';
+
+import { RoomCode } from '../../components/RoomCode';
 import { Badge } from '../../components/Badge';
 
 type QuestionProps = {
@@ -18,7 +19,7 @@ export const RoomCard: React.FC<QuestionProps> = (props) => {
       </Link>
       <footer>
         <Styled.Buttons>
-          <Badge type="error">終了しました</Badge>
+          <RoomCode code="XXXXXXXXX" text />
         </Styled.Buttons>
       </footer>
     </Styled.Container>
