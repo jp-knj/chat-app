@@ -3,7 +3,7 @@ import * as Styled from './styles';
 
 type CardProps = {
   btnStyle?: 'fill' | 'outline' | 'primary';
-  value: number;
+  value?: number;
   text: string;
 };
 
