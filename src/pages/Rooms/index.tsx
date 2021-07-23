@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import * as Styled from './styles';
 
 import { Header } from '../../components/Header';
@@ -8,6 +9,7 @@ import { RoomCard } from '../../components/RoomCard';
 import { Button } from '../../components/Button';
 
 export const Rooms = () => {
+  const history = useHistory();
   return (
     <Styled.Container>
       <Header>
@@ -17,7 +19,9 @@ export const Rooms = () => {
         <Styled.Left>
           <Styled.Title>
             <h1>お部屋:</h1>
-            <Button btnType="outline">部屋をつくる</Button>
+            <Button btnType="outline" onClick={() => history.push('/rooms/new')}>
+              部屋をつくる
+            </Button>
           </Styled.Title>
           <Styled.Rooms>
             <RoomCard />
