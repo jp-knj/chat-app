@@ -1,12 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import * as Styled from './../../styles/authPages';
 import IconGoogle from '../../assets/images/icon_google.svg';
+
+import { useAuth } from '../../hooks/useAuth';
 
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 
 export const Home: React.FC = () => {
+  const history = useHistory();
+
+  const [alert, setAlert] = useState('not-connected');
+  const { user, signInWithGoogle } = useAuth();
+  const handleCreateRoom = async () => {
+    !user && (await signInWithGoogle());
+    setAlert('conected');
+    setTimeout(() => {
+      history.push('/rooms/new');
+    }, 2100);
+  };
   return (
     <Styled.Container>
       <Styled.Left as="aside">
@@ -17,7 +30,7 @@ export const Home: React.FC = () => {
         <Styled.Content>
           <strong className="mobile">Q&A部屋へようこそ</strong>
           <Styled.Separator>部屋を作りたい方へ</Styled.Separator>
-          <Button btnType="fill">
+          <Button btnG={true} btnType="fill" onClick={handleCreateRoom}>
             <img src={IconGoogle} alt="Googleアイコン" />
             ログインする
           </Button>
