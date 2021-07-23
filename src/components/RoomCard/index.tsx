@@ -6,9 +6,9 @@ import { RoomCode } from '../../components/RoomCode';
 import { Badge } from '../../components/Badge';
 
 type QuestionProps = {
-  title?: string;
-  endeAt?: string | undefined;
-  code?: string;
+  title: string;
+  endeAt: string | undefined;
+  code: string;
 };
 
 export const RoomCard: React.FC<QuestionProps> = (props) => {
@@ -19,7 +19,8 @@ export const RoomCard: React.FC<QuestionProps> = (props) => {
       </Link>
       <footer>
         <Styled.Buttons>
-          <RoomCode code="XXXXXXXXX" text />
+          {!props.endeAt && <RoomCode code={props.code} text />}
+          {!!props.endeAt && <Badge type="error">Closed</Badge>}
         </Styled.Buttons>
       </footer>
     </Styled.Container>

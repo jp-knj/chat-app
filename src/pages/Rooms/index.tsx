@@ -2,6 +2,8 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import * as Styled from './styles';
 
+import { useRooms } from '../../hooks/useRooms';
+
 import { Header } from '../../components/Header';
 import { ToggleTheme } from '../../components/ToggleTheme';
 import { Card } from '../../components/Card';
@@ -10,6 +12,10 @@ import { Button } from '../../components/Button';
 
 export const Rooms = () => {
   const history = useHistory();
+  const { rooms } = useRooms();
+
+  const openRooms = rooms.filter((room) => !room.endeAt);
+
   return (
     <Styled.Container>
       <Header>
@@ -24,16 +30,27 @@ export const Rooms = () => {
             </Button>
           </Styled.Title>
           <Styled.Rooms>
-            <RoomCard />
-            <RoomCard />
-            <RoomCard />
+            {rooms.map((room) => {
+              return (
+                <RoomCard
+                  key={room.id}
+                  title={room.name}
+                  endeAt={room.endeAt}
+                  code={room.id}
+                />
+              );
+            })}
           </Styled.Rooms>
         </Styled.Left>
         <Styled.Right>
           <Styled.Cards>
-            <Card btnStyle="primary" text="部屋の数" />
-            <Card btnStyle="fill" text="OPEN!" />
-            <Card btnStyle="outline" text="CLOSED!" />
+            <Card btnStyle="primary" value={rooms.length} text="部屋の数" />
+            <Card btnStyle="fill" value={openRooms.length} text="OPEN!" />
+            <Card
+              btnStyle="outline"
+              value={rooms.length - openRooms.length}
+              text="CLOSED!"
+            />
           </Styled.Cards>
         </Styled.Right>
       </Styled.Main>
