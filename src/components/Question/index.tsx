@@ -1,6 +1,7 @@
-import React from 'react';
-import * as Styled from './styles';
 import cx from 'classnames';
+import React from 'react';
+
+import * as Styled from './styles';
 
 type QuestionProps = {
   content: string;

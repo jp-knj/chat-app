@@ -1,16 +1,19 @@
 import React from 'react';
+import { ModalProvider } from 'styled-react-modal';
 
-import Routes from './routers';
-
-import { ThemeContextProvider } from './contexts/ThemeContext';
 import { AuthContextProvider } from './contexts/AuthContext';
+import { ThemeContextProvider } from './contexts/ThemeContext';
+import Routes from './routers';
+import { ModalBackground } from './styles/modalBackground';
 
 function App() {
   return (
     <ThemeContextProvider>
-      <AuthContextProvider>
-        <Routes />
-      </AuthContextProvider>
+      <ModalProvider backgroundComponent={ModalBackground}>
+        <AuthContextProvider>
+          <Routes />
+        </AuthContextProvider>
+      </ModalProvider>
     </ThemeContextProvider>
   );
 }

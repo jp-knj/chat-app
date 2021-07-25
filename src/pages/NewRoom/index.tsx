@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import * as Styled from './../../styles/authPages';
 import { Link, useHistory } from 'react-router-dom';
 
-import { useAuth } from '../../hooks/useAuth';
-import { database } from '../../services/firebase';
-
-import { ToggleTheme } from '../../components/ToggleTheme';
+import illIcon from '../../assets/images/icon_ill.svg';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import { Logo } from '../../components/Logo';
 import { Toast } from '../../components/Toast';
-
-import illIcon from '../../assets/images/icon_ill.svg';
+import { ToggleTheme } from '../../components/ToggleTheme';
+import { useAuth } from '../../hooks/useAuth';
+import { database } from '../../services/firebase';
+import * as Styled from './../../styles/authPages';
 
 export const NewRoom = () => {
   const [newRoom, setNewRoom] = useState('');

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import * as Styled from './styles';
 import { CgDarkMode } from 'react-icons/cg';
 
-import { useTheme } from './../../hooks/useTheme';
-
 import { Toast } from '../Toast';
+import { useTheme } from './../../hooks/useTheme';
+import * as Styled from './styles';
 
 export const ToggleTheme = () => {
   const { toggleTheme, isLight } = useTheme();

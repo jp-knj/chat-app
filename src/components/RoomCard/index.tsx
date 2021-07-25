@@ -1,9 +1,9 @@
 import React from 'react';
-import * as Styled from './styles';
 import { Link } from 'react-router-dom';
 
-import { RoomCode } from '../../components/RoomCode';
 import { Badge } from '../../components/Badge';
+import { RoomCode } from '../../components/RoomCode';
+import * as Styled from './styles';
 
 type QuestionProps = {
   title: string;

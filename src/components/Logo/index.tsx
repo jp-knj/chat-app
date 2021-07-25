@@ -1,6 +1,7 @@
 import React from 'react';
-import * as Styled from './styles';
 import { Link } from 'react-router-dom';
+
+import * as Styled from './styles';
 
 export const Logo = (props: any) => {
   return (
@@ -8,7 +9,7 @@ export const Logo = (props: any) => {
       <Styled.Container>
         <svg
           id="Capa_1"
-          enable-background="new 0 0 512.008 512.008"
+          enableBackground="new 0 0 512.008 512.008"
           height="512"
           viewBox="0 0 512.008 512.008"
           width="30"

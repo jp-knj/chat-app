@@ -1,7 +1,7 @@
 import React from 'react';
-import * as Styled from './styles';
 
 import copyImg from './../../assets/images/icon_copy.svg';
+import * as Styled from './styles';
 // import { Toast } from '../Toast';
 
 type RoomCodeProps = {

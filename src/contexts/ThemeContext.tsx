@@ -1,8 +1,9 @@
-import React, { ReactNode, createContext, useState, useEffect } from 'react';
+import React, { createContext, ReactNode, useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+
 import { GlobalStyle } from '../styles/globalTheme';
 import DefaultTheme from '../styles/styled';
-import { light, dark } from '../styles/theme';
+import { dark, light } from '../styles/theme';
 
 type ThemeContextType = {
   isLight: boolean;

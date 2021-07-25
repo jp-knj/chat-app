@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import * as Styled from './../../styles/authPages';
+
 import IconGoogle from '../../assets/images/icon_google.svg';
-
-import { useAuth } from '../../hooks/useAuth';
-
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+import { useAuth } from '../../hooks/useAuth';
+import * as Styled from './../../styles/authPages';
 
 export const Home: React.FC = () => {
   const history = useHistory();

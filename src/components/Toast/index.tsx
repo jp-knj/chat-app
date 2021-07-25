@@ -1,6 +1,7 @@
 import React from 'react';
+import { MdError, MdInfo, MdWarning } from 'react-icons/md';
+
 import * as Styled from './styles';
-import { MdInfo, MdWarning, MdError } from 'react-icons/md';
 
 type ToastTypes = {
   children: React.ReactNode;

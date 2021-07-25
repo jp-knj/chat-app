@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import * as Styled from './styles';
 
-import { useAuth } from '../../hooks/useAuth';
-import { useRoom } from '../../hooks/useRoom';
-
+import chatImg from '../../assets/images/messages.svg';
+import { Badge } from '../../components/Badge';
 import { Button } from '../../components/Button';
+import { Card } from '../../components/Card';
+import { Header } from '../../components/Header';
+import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
 import { Toast } from '../../components/Toast';
 import { ToggleTheme } from '../../components/ToggleTheme';
-import { Card } from '../../components/Card';
-import { Question } from '../../components/Question';
-import { Header } from '../../components/Header';
-import { Badge } from '../../components/Badge';
-
-import chatImg from '../../assets/images/messages.svg';
-
+import { useAuth } from '../../hooks/useAuth';
+import { useRoom } from '../../hooks/useRoom';
 import { database } from '../../services/firebase';
+import * as Styled from './styles';
 
 type RoomParams = {
   id: string;

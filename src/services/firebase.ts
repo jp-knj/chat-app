@@ -1,22 +1,21 @@
-import firebase from 'firebase/app';
-
 import 'firebase/auth';
 import 'firebase/database';
 
-const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_DATABASE_URL,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
-};
+import firebase from 'firebase/app';
 
+const firebaseConfig = {
+  apiKey: 'AIzaSyDlrCEQtlZLOItsB1A9yd6rztFjNmIaNXQ',
+  authDomain: 'chat-app-432a4.firebaseapp.com',
+  databaseURL: 'https://chat-app-432a4-default-rtdb.asia-southeast1.firebasedatabase.app',
+  projectId: 'chat-app-432a4',
+  storageBucket: 'chat-app-432a4.appspot.com',
+  messagingSenderId: '573633055694',
+  appId: '1:573633055694:web:43f249e691317763df399f',
+  measurementId: 'G-TY4GK95KB8',
+};
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 const database = firebase.database();
 
-export { firebase, auth, database };
+export { auth, database, firebase };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../Button';
 import { Container, StyledModal } from './styles';
-import alertImg from './../../assets/images/alert.svg';
+import alertImg from './../../assets/images/icon_alert.svg';
 
 type ModalProps = {
   modalVisibility: boolean;
@@ -10,12 +10,12 @@ type ModalProps = {
   children?: React.ReactNode;
 };
 
-export const Modal = ({
+export const Modal: React.FC<ModalProps> = ({
   modalVisibility,
   setVisibility,
   handleConfirme,
   children,
-}: ModalProps) => {
+}) => {
   return (
     <StyledModal
       isOpen={modalVisibility}
@@ -24,13 +24,13 @@ export const Modal = ({
       <Container>
         <img src={alertImg} alt="" />
         <h2>{children}</h2>
-        <span>Essa ação não pode ser desfeita.</span>
+        <span></span>
         <div>
           <Button btnType="outline" onClick={setVisibility}>
-            Cancelar
+            キャンセル
           </Button>
           <Button btnType="fill" onClick={handleConfirme}>
-            Confirmar
+            確認する
           </Button>
         </div>
       </Container>

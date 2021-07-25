@@ -1,7 +1,7 @@
 import React from 'react';
-import * as Styled from './styles';
 
 import { Logo } from '../Logo';
+import * as Styled from './styles';
 type HeaderProps = {
   children: React.ReactNode;
 };
