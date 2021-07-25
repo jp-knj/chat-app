@@ -1,10 +1,10 @@
 import React from 'react';
-import * as Styled from './styles';
 
 import { Header } from '../../components/Header';
 import { Toast } from '../../components/Toast';
 import { ToggleTheme } from '../../components/ToggleTheme';
 import { NotFoundIcon } from '../NotFoundIcon';
+import * as Styled from './styles';
 
 export const NotFound = () => {
   return (

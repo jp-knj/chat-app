@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { Container as LogoContainer } from '../components/Logo/styles';
 import { Container as ToggleThemeContainer } from '../components/ToggleTheme/styles';
 
